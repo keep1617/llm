@@ -1,7 +1,7 @@
 import requests
 import time
 
-API_TOKEN = '__pltBHTV8h45nonMMxV6Akh63NAfaUjY5Ne5GTyZ2nu5'
+API_TOKEN = ''
 
 HEADERS = {'Authorization': f'Bearer {API_TOKEN}'}
 

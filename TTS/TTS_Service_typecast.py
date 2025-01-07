@@ -3,7 +3,7 @@ import time
 import rospy
 from std_msgs.msg import String
 
-API_TOKEN = '__pltBHTV8h45nonMMxV6Akh63NAfaUjY5Ne5GTyZ2nu5'
+API_TOKEN = ''
 
 
 class TTS:
