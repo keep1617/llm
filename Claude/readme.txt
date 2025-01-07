@@ -1,5 +1,0 @@
-pip install anthropic
-
-
-export ANTHROPIC_API_KEY='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'
-bashrc에 추가

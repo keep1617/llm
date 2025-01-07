@@ -225,7 +225,7 @@ class Chatbot:
 
 
 if __name__ == "__main__":
-    key ="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"
+    key =""
 
     
     vis = Vision_answer(key)

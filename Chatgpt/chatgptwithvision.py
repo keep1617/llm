@@ -9,7 +9,7 @@ import requests
 class Vision_answer:
 
     def __init__(self):
-        api_key = "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"
+        api_key = ""
 
         print("vision model loading")
 
