@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>술집 키오스크</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/RobotWebTools/roslibjs/master/build/roslib.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 스타일링 생략 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">메뉴</h1>
+        <div class="menu-item">
+            <span>맥주</span>
+            <button class="btn btn-primary" onclick="order('맥주')">주문하기</button>
+        </div>
+        <div class="menu-item">
+            <span>와인</span>
+            <button class="btn btn-primary" onclick="order('와인')">주문하기</button>
+        </div>
+    </div>
+    <script>
+        // ROS WebSocket 연결 설정
+        var ros = new ROSLIB.Ros({
+            url: 'ws://localhost:9090' // ROS 웹소켓 주소
+        });
+
+        ros.on('connection', function() {
+            console.log('연결됨!');
+        });
+
+        ros.on('error', function(error) {
+            console.log('Error connecting to ROS: ', error);
+        });
+
+        ros.on('close', function() {
+            console.log('Connection closed');
+        });
+
+        // 주문 함수
+        function order(item) {
+            console.log(item + " 주문됨!");
+
+            // ROS 메시지 전송 예시
+            var orderMessage = new ROSLIB.Message({
+                data: item
+            });
+
+            // ROS 토픽으로 메시지 전송
+            var topic = new ROSLIB.Topic({
+                ros: ros,
+                name: '/order_topic', // ROS에서 구독하는 토픽 이름
+                messageType: 'std_msgs/String' // 메시지 타입
+            });
+
+            topic.publish(orderMessage); // 메시지 전송
+        }
+    </script>
+</body>
+</html>

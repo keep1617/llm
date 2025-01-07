@@ -1,0 +1,16 @@
+{
+    "train": [
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"},
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"},
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"},
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"},
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"},
+        {"role": "system", "content": "You are a bot that responds to weather queries."},
+        {"role": "user", "content": "Hey, what's the temperature in Paris right now?"}
+      ]
+}

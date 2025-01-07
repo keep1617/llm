@@ -1,0 +1,45 @@
+
+
+
+LLM ROS에서 돌리기
+
+CLASS LLMCHAT
+
+
+1.초기화 필요  			def init 
+	모듈 불러오기
+	토크나이저 불러오기
+	
+	
+2. subscriber			def init_sub
+
+
+3. callback 함수		def prompt_callback(msg)
+3.publisher			def init_pub(text)
+
+4. subscriber에서 받은 데이터 전처리	def preprocess(prompt)
+5. input 모델에 넣어서 output만들기 	def chat(prompt)
+
+
+
+
+
+
+
+
+TTS  ROS에서 
+
+class TTS
+
+1. 초기화\			def init
+	모듈 불러오기 등
+	
+
+2. SUBSCRIBVER			def init_sub
+
+
+
+3. 말하기			def speaker
+
+	
+

@@ -1,0 +1,33 @@
+
+
+
+LLM ROS에서 돌리기
+
+
+1.초기화 필요
+
+	
+	
+2. subscriber
+
+3.publisher
+
+4. subscriber에서 받은 데이터 전처리
+5. input 모델에 넣어서 output만들기
+
+
+
+
+
+
+
+
+TTS  ROS에서 
+
+1. 초기화\
+	모듈 불러오기 등
+	
+
+2. SUBSCRIBVER
+3. 받은 말 초기화
+
